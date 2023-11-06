@@ -5,14 +5,10 @@ router.get("/" , controllUser.getUsers)
 
 router.get("/:id" , controllUser.getIdUsers)
 
-router.post("/registro" , controllUser.user_register)
+router.post("/registro" , controllUser.postUser)
 
-router.put("/:id" , (req,res) => {
-    res.send("usuarios putos")
-})
+router.put("/:id" , controllUser.putUser)
 
-router.delete("/:id" , (req,res) => {
-    res.send("usuarios putos")
-})
+router.delete("/:id" , controllUser.deleteUser)
 
 module.exports = router
