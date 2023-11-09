@@ -6,7 +6,7 @@ const getUsers = (req,res) =>{
 
     db.query(query, (err, row) =>{
         if(!err){
-            res.json({msg: row})
+            res.json({msg:row})
         }else{
             res.status(404).json({ msg: "Not Foud 😕" })
         }
